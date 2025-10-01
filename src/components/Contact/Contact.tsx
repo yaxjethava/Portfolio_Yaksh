@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaPhone,FaPhoneAlt, FaMapMarkerAlt, FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 import './Contact.css';
 
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
       link: 'mailto:jethavayax99@gmail.com'
     },
     {
-      icon: FaPhone,
+      icon: FaPhoneAlt,
       title: 'Phone',
       value: '+91 76238 53955',
       link: 'tel:+917623853955'

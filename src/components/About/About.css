@@ -57,6 +57,8 @@
 
 @media (max-width: 768px) {
   .about-image {
+    display: flex;
+    justify-content: center;
     text-align: center;
   }
   

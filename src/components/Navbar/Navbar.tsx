@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
     >
       <Container>
         <BSNavbar.Brand href="#home" className="brand-name">
-          Yax Jethava
+          Yaksh Jethava
         </BSNavbar.Brand>
         <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
         <BSNavbar.Collapse id="basic-navbar-nav">

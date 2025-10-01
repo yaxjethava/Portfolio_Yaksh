@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
               </p>
               <div className="copyright">
                 <p className="mb-0">
-                  © 2025 Made with <FaHeart className="heart-icon" /> by Yaksh
+                  © 2025 Made with ♥ by Yaksh
                 </p>
               </div>
             </div>

@@ -1,5 +1,6 @@
 // Skills.tsx
 import React, { useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import './Skills.css';
 
 const Skills: React.FC = () => {
@@ -42,21 +43,21 @@ const Skills: React.FC = () => {
 
   return (
     <section id="skills" className="section skills-section">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 text-center mb-5">
+      <Container>
+        <Row>
+          <Col xs={12} className="text-center mb-5">
             <h2 className="section-title" data-aos="fade-up">
               Skills & Expertise
             </h2>
             <p className="section-subtitle" data-aos="fade-up" data-aos-delay="200">
               Technologies and tools I work with to bring ideas to life
             </p>
-          </div>
-        </div>
+          </Col>
+        </Row>
 
         {/* Category Filter */}
-        <div className="row mb-5">
-          <div className="col-12">
+        <Row className="mb-5">
+          <Col xs={12}>
             <div className="category-filter" data-aos="fade-up">
               {categories.map((category) => (
                 <button
@@ -68,11 +69,11 @@ const Skills: React.FC = () => {
                 </button>
               ))}
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
 
-        <div className="row">
-          <div className="col-lg-9 col-12 mb-5">
+        <Row>
+          <Col lg={9} xs={12} className="mb-5">
             <div className="skills-grid" data-aos="fade-right">
               {filteredSkills.map((skill, index) => (
                 <div
@@ -104,9 +105,9 @@ const Skills: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </Col>
 
-          <div className="col-lg-3 col-12">
+          <Col lg={3} xs={12}>
             <div className="soft-skills-wrapper" data-aos="fade-left">
               <div className="soft-skills-header mb-4">
                 <h4>Soft Skills</h4>
@@ -126,11 +127,11 @@ const Skills: React.FC = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>  
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 
-export default Skills;  
+export default Skills;

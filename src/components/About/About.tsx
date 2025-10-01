@@ -11,7 +11,7 @@ const About: React.FC = () => {
           <Col lg={6} className="mb-5 mb-lg-0">
             <div className="about-image" data-aos="fade-right">
               <img
-                src='../assets/yaksh jethava.jpg'
+                src='/assets/yaksh jethava.jpg'
                 alt="Yax Jethava"
                 className="img-fluid rounded"
               />

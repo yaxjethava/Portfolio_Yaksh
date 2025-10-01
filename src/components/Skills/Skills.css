@@ -1,9 +1,10 @@
 /* Skills.css */
 
 .skills-section {
-  background: var(--light-gray);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   position: relative;
   overflow: hidden;
+  padding: 80px 0;
 }
 
 /* Category Filter Styles */
@@ -12,9 +13,9 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
-
+/* 
 .filter-btn {
   padding: 10px 24px;
   border: 2px solid var(--medium-gray);
@@ -46,18 +47,48 @@
   left: 0;
 }
 
-.filter-btn span,
-.filter-btn:hover,
-.filter-btn.active {
+.filter-btn span {
   position: relative;
   z-index: 1;
 }
 
+.filter-btn:hover,
+.filter-btn.active {
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.filter-btn.active {
+  border-color: var(--primary-color);
+} */
+ .filter-btn {
+  padding: 10px 24px;
+  border: 2px solid var(--medium-gray);
+  background: white;
+  color: var(--accent-color);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
 .filter-btn.active {
   background: var(--primary-color);
-  border-color: var(--primary-color);
   color: white;
+  border-color: var(--primary-color);
 }
+
 
 .filter-btn:hover:not(.active) {
   border-color: var(--primary-color);
@@ -69,12 +100,14 @@
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 24px;
+  justify-content: center;
 }
 
 .skill-card {
-  flex: 1 1 calc(25% - 20px);
-  min-width: 180px;
+  flex: 0 1 calc(25% - 24px);
+  min-width: 200px;
+  max-width: 280px;
   padding: 0;
   border-radius: 16px;
   overflow: hidden;
@@ -82,6 +115,7 @@
   cursor: pointer;
   position: relative;
   background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .skill-card::before {
@@ -102,40 +136,40 @@
 
 .skill-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.2);
 }
 
 .skill-card-header {
-  padding: 24px 20px 16px;
+  padding: 28px 20px 20px;
   text-align: center;
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(30, 64, 175, 0.05));
 }
 
 .skill-card-icon {
-  font-size: 3rem;
+  font-size: 3.5rem;
   transition: all 0.3s ease;
   display: inline-block;
 }
 
 .skill-card:hover .skill-card-icon {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.15) rotate(5deg);
 }
 
 .skill-card-body {
-  padding: 16px 20px;
+  padding: 20px;
   text-align: center;
 }
 
 .skill-card-title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--accent-color);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .skill-badge {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 5px 14px;
   background: var(--primary-color);
   color: white;
   border-radius: 12px;
@@ -146,7 +180,7 @@
 }
 
 .skill-card-footer {
-  padding: 12px 20px 20px;
+  padding: 16px 20px 24px;
   background: rgba(0, 0, 0, 0.02);
 }
 
@@ -154,7 +188,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .proficiency-label {
@@ -167,7 +201,7 @@
 
 .proficiency-dots {
   display: flex;
-  gap: 6px;
+  gap: 8px;
 }
 
 .dot {
@@ -222,25 +256,27 @@
 .soft-skills-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .soft-skill-badge {
-  padding: 16px 20px;
+  padding: 18px 22px;
   border-radius: 12px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   transition: all 0.3s ease;
   cursor: pointer;
   background: white;
   border-left: 3px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .soft-skill-badge:hover {
   transform: translateX(8px);
   border-left-color: var(--primary-color);
   background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), white);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
 }
 
 .badge-dot {
@@ -259,86 +295,181 @@
 
 .badge-text {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--accent-color);
 }
 
-/* Responsive Styles */
+/* Responsive Styles - Tablet */
 @media (max-width: 991px) {
   .soft-skills-wrapper {
     position: static;
     margin-top: 3rem;
   }
 
+  .skills-grid {
+    gap: 20px;
+  }
+
   .skill-card {
-    flex: 1 1 calc(33.333% - 20px);
-    min-width: 160px;
+    flex: 0 1 calc(33.333% - 20px);
+    min-width: 180px;
+    max-width: none;
+  }
+
+  .skill-card-icon {
+    font-size: 3rem;
+  }
+
+  .skill-card-title {
+    font-size: 1.1rem;
   }
 }
 
+/* Responsive Styles - Mobile */
 @media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 0;
+  }
+
   .category-filter {
-    gap: 8px;
+    gap: 10px;
+    margin-bottom: 2.5rem;
   }
 
   .filter-btn {
-    padding: 8px 16px;
+    padding: 8px 18px;
     font-size: 0.85rem;
   }
 
-  /* 2 Cards per row on mobile */
   .skills-grid {
     gap: 16px;
   }
 
   .skill-card {
-    flex: 1 1 calc(50% - 16px);
+    flex: 0 1 calc(50% - 16px);
     min-width: 0;
-    max-width: calc(50% - 8px);
+    max-width: none;
+  }
+
+  .skill-card-header {
+    padding: 24px 16px 16px;
   }
 
   .skill-card-icon {
     font-size: 2.5rem;
   }
 
+  .skill-card-body {
+    padding: 16px;
+  }
+
   .skill-card-title {
     font-size: 1rem;
   }
 
-  /* Soft skills 2 columns on mobile */
+  .skill-card-footer {
+    padding: 12px 16px 20px;
+  }
+
+  .soft-skills-wrapper {
+    margin-top: 2.5rem;
+  }
+
   .soft-skills-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
   }
 
   .soft-skill-badge {
-    flex: 1 1 calc(50% - 10px);
-    padding: 14px 16px;
+    flex: 0 1 calc(50% - 12px);
+    padding: 16px 18px;
     min-width: 0;
   }
 
   .badge-text {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }
 
+/* Responsive Styles - Small Mobile */
 @media (max-width: 480px) {
+  .skills-section {
+    padding: 50px 0;
+  }
+
+  .category-filter {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 7px 16px;
+    font-size: 0.8rem;
+  }
+
+  .skills-grid {
+    gap: 14px;
+  }
+
   .skill-card {
-    flex: 1 1 calc(50% - 16px);
-    min-width: 0;
+    flex: 0 1 calc(50% - 14px);
   }
 
   .skill-card-header {
-    padding: 20px 16px 12px;
+    padding: 20px 14px 14px;
   }
 
   .skill-card-icon {
     font-size: 2.2rem;
   }
 
+  .skill-card-body {
+    padding: 14px;
+  }
+
   .skill-card-title {
     font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .skill-badge {
+    padding: 4px 12px;
+    font-size: 0.7rem;
+  }
+
+  .skill-card-footer {
+    padding: 10px 14px 18px;
+  }
+
+  .proficiency-label {
+    font-size: 0.8rem;
+  }
+
+  .proficiency-dots {
+    gap: 6px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .soft-skills-list {
+    gap: 10px;
+  }
+
+  .soft-skill-badge {
+    flex: 0 1 calc(50% - 10px);
+    padding: 14px 16px;
+  }
+
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .badge-text {
+    font-size: 0.85rem;
   }
 }
