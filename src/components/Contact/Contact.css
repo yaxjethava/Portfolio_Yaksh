@@ -116,6 +116,11 @@
   padding: 1rem;
 }
 
+.btn-primary-custom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .custom-alert.alert-success {
   background: rgba(34, 197, 94, 0.1);
   color: #16a34a;

@@ -472,14 +472,17 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .filter-buttons {
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 20px;
     padding: 15px;
+  }
+  .filter-buttons svg{
+    display: none;
   }
 
   .filter-btn {
     width: 100%;
-    max-width: 200px;
+    max-width: 140px;
   }
 
   .project-image {

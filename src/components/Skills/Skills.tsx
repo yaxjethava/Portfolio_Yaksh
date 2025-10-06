@@ -12,7 +12,6 @@ const Skills: React.FC = () => {
     { name: 'JavaScript', level: 88, icon: '⚡', category: 'Frontend' },
     { name: 'React.js', level: 85, icon: '⚛️', category: 'Frontend' },
     { name: 'Bootstrap', level: 90, icon: '🅱️', category: 'Frontend' },
-    { name: 'Tailwind CSS', level: 85, icon: '💨', category: 'Frontend' },
     { name: 'Node.js', level: 80, icon: '🟢', category: 'Backend' },
     { name: 'Express.js', level: 78, icon: '🚀', category: 'Backend' },
     { name: 'MongoDB', level: 82, icon: '🍃', category: 'Database' },

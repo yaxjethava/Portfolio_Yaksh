@@ -15,12 +15,27 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 100,
-      easing: 'ease-in-out',
-      once: true,
-    });
+
+    // Check screen width
+    if (window.innerWidth >= 768) {
+
+      AOS.init({
+        duration: 900,
+        offset: 100,
+        easing: 'ease-in-out',
+        once: true,
+      });
+
+    }else{
+
+      AOS.init({
+        duration: 800,
+        offset: 60,
+        easing: 'ease-in-out',
+        once: true,
+      });
+
+    }
   }, []);
 
   return (

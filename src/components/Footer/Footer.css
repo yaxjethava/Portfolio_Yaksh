@@ -87,6 +87,10 @@
 }
 
 .scroll-top-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
   background: var(--primary-color);
   border: none;
   width: 45px;

@@ -34,6 +34,14 @@ const About: React.FC = () => {
 
               <div className="about-highlights">
                 <Row>
+
+                  <Col md={6} className="mb-3">
+                    <div className="highlight-item clean-card p-3 text-center d-flex flex-column align-items-center">
+                      <FaLightbulb className="highlight-icon mb-2" />
+                      <h6>Innovation</h6>
+                      <p>Always exploring new technologies</p>
+                    </div>
+                  </Col>
                   <Col md={6} className="mb-3">
                     <div className="highlight-item clean-card p-3 text-center d-flex flex-column align-items-center">
                       <FaCode className="highlight-icon mb-2" />
@@ -55,13 +63,7 @@ const About: React.FC = () => {
                       <p>Confident presentation and communication</p>
                     </div>
                   </Col>
-                  <Col md={6} className="mb-3">
-                    <div className="highlight-item clean-card p-3 text-center d-flex flex-column align-items-center">
-                      <FaLightbulb className="highlight-icon mb-2" />
-                      <h6>Innovation</h6>
-                      <p>Always exploring new technologies</p>
-                    </div>
-                  </Col>
+
                 </Row>
 
               </div>

@@ -378,6 +378,7 @@
   .soft-skills-list {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
   }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-import { FaEnvelope, FaPhone,FaPhoneAlt, FaMapMarkerAlt, FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 import './Contact.css';
 
@@ -16,6 +16,9 @@ const Contact: React.FC = () => {
   const [alertMessage, setAlertMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+
+
+
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -24,26 +27,34 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
+    const dataToSend = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      time: new Date().toLocaleString(),
+    };
+
     try {
-      // Replace with your EmailJS configuration
       await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        formData,
-        'YOUR_PUBLIC_KEY'
+        "service_o4zj45i",     // ✅ Your Service ID
+        "template_053b6do",    // ✅ Your Template ID
+        dataToSend,
+        "CzhDjfAfefFY2ytJT"      // ⚠️ Replace with your EmailJS Public Key
       );
-      
-      setAlertType('success');
-      setAlertMessage('Message sent successfully! I\'ll get back to you soon.');
+
+      setAlertType("success");
+      setAlertMessage("Message sent successfully! I'll get back to you soon.");
       setShowAlert(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-      setAlertType('danger');
-      setAlertMessage('Failed to send message. Please try again later.');
+      console.error("Email send failed:", error);
+      setAlertType("danger");
+      setAlertMessage("Failed to send message. Please try again later.");
       setShowAlert(true);
     }
-    
+
     setTimeout(() => setShowAlert(false), 5000);
   };
 
@@ -91,10 +102,10 @@ const Contact: React.FC = () => {
           <Col lg={6} className="mb-5 mb-lg-0">
             <div className="contact-info" data-aos="fade-right">
               <h4 className="mb-4">Contact Information</h4>
-              
+
               {contactInfo.map((info, index) => (
-                <div 
-                  key={info.title} 
+                <div
+                  key={info.title}
                   className="contact-item clean-card mb-3"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
@@ -133,7 +144,7 @@ const Contact: React.FC = () => {
           <Col lg={6}>
             <div className="contact-form clean-card" data-aos="fade-left">
               <h4 className="mb-4">Send Message</h4>
-              
+
               {showAlert && (
                 <Alert variant={alertType} className="custom-alert">
                   {alertMessage}
@@ -169,7 +180,7 @@ const Contact: React.FC = () => {
                     </Form.Group>
                   </Col>
                 </Row>
-                
+
                 <Form.Group className="mb-3">
                   <Form.Control
                     type="text"
@@ -181,7 +192,7 @@ const Contact: React.FC = () => {
                     className="custom-input"
                   />
                 </Form.Group>
-                
+
                 <Form.Group className="mb-4">
                   <Form.Control
                     as="textarea"
@@ -194,7 +205,7 @@ const Contact: React.FC = () => {
                     className="custom-input"
                   />
                 </Form.Group>
-                
+
                 <Button type="submit" className="btn-primary-custom w-100">
                   <FaPaperPlane className="me-2" />
                   Send Message

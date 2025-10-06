@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaHeart, FaArrowUp } from 'react-icons/fa';
+import {  FaArrowUp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer: React.FC = () => {
